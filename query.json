@@ -1,0 +1,16 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {"match_phrase": { "fields.actors": "Harrison Ford" }},
+        {"match": { "fields.plot": "Jones" }}
+      ]
+    }
+  },
+  "_source": [
+    "fields.title",
+    "fields.actors",
+    "fields.directors",
+    "fields.plot"
+  ]
+}
